@@ -166,6 +166,10 @@ output "control_plane_subnet_cidrs" {
   value = "${module.control_plane.subnet_cidrs}"
 }
 
+output "control_plane_subnet_reserved" {
+  value = "${module.control_plane.subnet_reserved}"
+}
+
 output "control_plane_subnet_availability_zones" {
   value = "${module.control_plane.subnet_availability_zones}"
 }

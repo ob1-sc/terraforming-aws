@@ -20,6 +20,10 @@ output "subnet_gateways" {
   value = ["${data.template_file.subnet_gateways.*.rendered}"]
 }
 
+output "subnet_reserved" {
+  value = ["${data.template_file.subnet_reserved.*.rendered}"]
+}
+
 output "subnet_cidrs" {
   value = ["${aws_subnet.control_plane.*.cidr_block}"]
 }
