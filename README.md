@@ -59,6 +59,7 @@ First, you'll need to clone this repo. Then, depending on if you're deploying PA
 1. `cd` into the proper directory:
     - [terraforming-pas/](terraforming-pas/)
     - [terraforming-pks/](terraforming-pks/)
+    - [terraforming-control-plane/](terraforming-control-plane/)
 1. Create [`terraform.tfvars`](/README.md#var-file) file
 1. Run terraform apply:
   ```bash
@@ -151,6 +152,8 @@ You can choose whether you would like an RDS or not. By default we have
 Note: RDS instances take a long time to deploy, keep that in mind. They're not required.
 
 ## Tearing down environment
+
+**Note:** This will only destroy resources deployed by Terraform. You will need to clean up anything deployed on top of that infrastructure yourself (e.g. by running `om delete-installation`)
 
 ```bash
 terraform destroy
