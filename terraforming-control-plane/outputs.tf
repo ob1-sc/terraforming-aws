@@ -54,12 +54,20 @@ output "infrastructure_subnet_cidrs" {
   value = "${module.infra.infrastructure_subnet_cidrs}"
 }
 
+output "infrastructure_subnet_reserved" {
+  value = "${module.infra.infrastructure_subnet_reserved}"
+}
+
 output "infrastructure_subnet_gateways" {
   value = "${module.infra.infrastructure_subnet_gateways}"
 }
 
 output "vpc_id" {
   value = "${module.infra.vpc_id}"
+}
+
+output "dns_server" {
+  value = "${cidrhost(var.vpc_cidr, 2)}"
 }
 
 output "network_name" {
